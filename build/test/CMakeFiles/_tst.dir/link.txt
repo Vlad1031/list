@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/_tst.dir/main.o CMakeFiles/_tst.dir/test.o  -o _tst   -L/home/vskotselias/Project/build/src  -L/home/vskotselias/Project/build/lib  ../src/lib_lib.a ../lib/libgtest.a -lpthread 

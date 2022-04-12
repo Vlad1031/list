@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/_run.dir/list.o CMakeFiles/_run.dir/main.o  -o _run 
