@@ -170,19 +170,6 @@ _lib/fast:
 .PHONY : _lib/fast
 
 #=============================================================================
-# Target rules for targets named _run
-
-# Build rule for target.
-_run: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run
-.PHONY : _run
-
-# fast build rule for target.
-_run/fast:
-	$(MAKE) -f src/CMakeFiles/_run.dir/build.make src/CMakeFiles/_run.dir/build
-.PHONY : _run/fast
-
-#=============================================================================
 # Target rules for targets named _tst
 
 # Build rule for target.
@@ -260,7 +247,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... _lib"
-	@echo "... _run"
 	@echo "... _tst"
 	@echo "... gmock_main"
 	@echo "... gmock"

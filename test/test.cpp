@@ -2,82 +2,87 @@
 
 Test::Test() { }
 
-//TEST(testPushBack, test1){
-//    List l;
+List l;
+List r;
 
-//    int value = 9;
-//    l.pushBack(value);
+TEST(ListFunction, PushBack){
+    int value = 9;
+    l.pushBack(value);
 
-//    EXPECT_EQ(1, l.size());
-//    EXPECT_EQ(value, l.at(0));
+    EXPECT_EQ(1, l.size());
+    EXPECT_EQ(value, l.at(0));
 
-//    value = 3;
-//    l.pushBack(value);
+    value = 3;
+    l.pushBack(value);
 
-//    EXPECT_EQ(2, l.size());
-//    EXPECT_EQ(value, l.at(1));
-//}
+    EXPECT_EQ(2, l.size());
+    EXPECT_EQ(value, l.at(1));
+    l.clear();
+}
 
-//TEST(testPushFront, test2){
-//    List l;
+TEST(ListFunction, PushFront){
+    l.clear();
+    int value = 5;
+    l.pushBack(9);
+    l.pushBack(1);
+    l.pushBack(8);
+    l.pushFront(value);
 
-//    int value = 5;
-//    l.pushBack(9);
-//    l.pushBack(1);
-//    l.pushBack(8);
-//    l.pushFront(value);
+    EXPECT_EQ(4, l.size());
+    EXPECT_EQ(value, l.at(0));
 
-//    EXPECT_EQ(4, l.size());
-//    EXPECT_EQ(value, l.at(0));
+    value = 3;
+    l.pushFront(value);
 
-//    value = 3;
-//    l.pushFront(value);
+    EXPECT_EQ(value, l.at(0));
+    l.clear();
+}
 
-//    EXPECT_EQ(value, l.at(0));
-//}
-
-//TEST(testAt, test3){
-//    List l;
-
-//    l.pushBack(9);
-//    l.pushBack(1);
-//    l.pushBack(8);
-
-//    EXPECT_EQ(1, l.at(1));
-//}
-
-//TEST(testClear, test4){
-//    List l;
-
-//    l.pushBack(9);
-//    l.pushBack(1);
-//    l.pushBack(8);
-
-//    EXPECT_EQ(3, l.size());
-//    l.clear();
-//    EXPECT_EQ(0, l.size());
-//}
-
-TEST(testOperator2, test6){
-    List l;
+TEST(ListFunction, At){
+    l.clear();
     l.pushBack(9);
     l.pushBack(1);
     l.pushBack(8);
 
-    List r;
+    EXPECT_EQ(1, l.at(1));
+    l.clear();
+}
+
+TEST(ListFunction, Clear){
+    l.clear();
+    l.pushBack(9);
+    l.pushBack(1);
+    l.pushBack(8);
+
+    EXPECT_EQ(3, l.size());
+    l.clear();
+    EXPECT_EQ(0, l.size());
+}
+
+TEST(Operator, EqualTo){
+    r.clear();
+    l.pushBack(9);
+    l.pushBack(1);
+    l.pushBack(8);
+
     r = l;
 
     ASSERT_TRUE(l == r);
+    r.clear();
+    l.clear();
 }
 
-//TEST(testOperator3, test7){
-//    List l;
-//    l.pushBack(9);
-//    l.pushBack(1);
-//    l.pushBack(8);
+TEST(Operator, NoEqualTo){
+    r.clear();
+    l.clear();
+    l.pushBack(9);
+    l.pushBack(1);
+    l.pushBack(8);
 
-//    List r = l;
-//    r.pushBack(5);
+    r = l;
+    r.pushBack(5);
 
-//    ASSERT_TRUE(l != r);
-//}
+    ASSERT_TRUE(l != r);
+    r.clear();
+    l.clear();
+}

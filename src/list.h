@@ -7,12 +7,12 @@ struct Elem{
 };
 
 class List{
-    int sizeList;
-    Elem *first, *last;
+    int m_sizeList;
+    Elem *m_first, *m_last;
 
 public:
     List();
-//    List(const List& l);
+    List(const List& l);
     ~List();
 
     void pushFront(const int value);
@@ -20,6 +20,8 @@ public:
     int at(const int index);
     void clear();
     int size();
+
+    int at(const int index) const;
     int size() const;
 
     List& operator= (const List &l);

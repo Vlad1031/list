@@ -57,45 +57,30 @@ include src/CMakeFiles/_lib.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/_lib.dir/flags.make
 
-src/CMakeFiles/_lib.dir/list.o: src/CMakeFiles/_lib.dir/flags.make
-src/CMakeFiles/_lib.dir/list.o: ../src/list.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vskotselias/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/_lib.dir/list.o"
-	cd /home/vskotselias/Project/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/_lib.dir/list.o -c /home/vskotselias/Project/src/list.cpp
+src/CMakeFiles/_lib.dir/list.cpp.o: src/CMakeFiles/_lib.dir/flags.make
+src/CMakeFiles/_lib.dir/list.cpp.o: ../src/list.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vskotselias/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/_lib.dir/list.cpp.o"
+	cd /home/vskotselias/Project/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/_lib.dir/list.cpp.o -c /home/vskotselias/Project/src/list.cpp
 
-src/CMakeFiles/_lib.dir/list.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/_lib.dir/list.i"
-	cd /home/vskotselias/Project/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vskotselias/Project/src/list.cpp > CMakeFiles/_lib.dir/list.i
+src/CMakeFiles/_lib.dir/list.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/_lib.dir/list.cpp.i"
+	cd /home/vskotselias/Project/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vskotselias/Project/src/list.cpp > CMakeFiles/_lib.dir/list.cpp.i
 
-src/CMakeFiles/_lib.dir/list.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/_lib.dir/list.s"
-	cd /home/vskotselias/Project/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vskotselias/Project/src/list.cpp -o CMakeFiles/_lib.dir/list.s
-
-src/CMakeFiles/_lib.dir/main.o: src/CMakeFiles/_lib.dir/flags.make
-src/CMakeFiles/_lib.dir/main.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vskotselias/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/_lib.dir/main.o"
-	cd /home/vskotselias/Project/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/_lib.dir/main.o -c /home/vskotselias/Project/src/main.cpp
-
-src/CMakeFiles/_lib.dir/main.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/_lib.dir/main.i"
-	cd /home/vskotselias/Project/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vskotselias/Project/src/main.cpp > CMakeFiles/_lib.dir/main.i
-
-src/CMakeFiles/_lib.dir/main.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/_lib.dir/main.s"
-	cd /home/vskotselias/Project/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vskotselias/Project/src/main.cpp -o CMakeFiles/_lib.dir/main.s
+src/CMakeFiles/_lib.dir/list.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/_lib.dir/list.cpp.s"
+	cd /home/vskotselias/Project/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vskotselias/Project/src/list.cpp -o CMakeFiles/_lib.dir/list.cpp.s
 
 # Object files for target _lib
 _lib_OBJECTS = \
-"CMakeFiles/_lib.dir/list.o" \
-"CMakeFiles/_lib.dir/main.o"
+"CMakeFiles/_lib.dir/list.cpp.o"
 
 # External object files for target _lib
 _lib_EXTERNAL_OBJECTS =
 
-src/lib_lib.a: src/CMakeFiles/_lib.dir/list.o
-src/lib_lib.a: src/CMakeFiles/_lib.dir/main.o
+src/lib_lib.a: src/CMakeFiles/_lib.dir/list.cpp.o
 src/lib_lib.a: src/CMakeFiles/_lib.dir/build.make
 src/lib_lib.a: src/CMakeFiles/_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vskotselias/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library lib_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vskotselias/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library lib_lib.a"
 	cd /home/vskotselias/Project/build/src && $(CMAKE_COMMAND) -P CMakeFiles/_lib.dir/cmake_clean_target.cmake
 	cd /home/vskotselias/Project/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/_lib.dir/link.txt --verbose=$(VERBOSE)
 

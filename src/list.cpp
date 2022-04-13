@@ -1,116 +1,134 @@
-#include <iostream>
 #include "list.h"
 
-List::List(){
-    std::cout << "Constructor" << std::endl;
-    sizeList = 0;
+List::List()
+{
+    m_first = m_last = nullptr;
+    m_sizeList = 0;
 }
 
-//List::List(const List& l){
-//    std::cout << "\nConstructor copy" << std::endl;
-//    clear();
+List::List(const List& l)
+{
+    m_first = m_last = nullptr;
+    m_sizeList = 0;
+    Elem *p = l.m_first;
+    while(p != nullptr)
+    {
+        pushBack(p->element);
+        p = p->next;
+    }
+}
 
-//    Elem *p = l.first;
-//    while(p != nullpts){
-//        pushBack(p->element);
-//        p = p->next;
-//    }
-//}
-
-List::~List(){
-    std::cout << "~Destructor" << std::endl;
+List::~List()
+{
     clear();
 }
 
-void List::pushFront(const int value){
+void List::pushFront(const int value)
+{
+    try {
+        new Elem;
+    }  catch (std::exception) {
+        throw "Error";
+    }
+
     Elem *p = new Elem;
 
     p->prev = nullptr;
     p->element = value;
-    p->next = first;
+    p->next = m_first;
 
-    if(first != nullptr){
-        first->prev = p;
+    if(m_first != nullptr)
+    {
+        m_first->prev = p;
     }
 
-    sizeList == 0 ? first = last = p : first = p;
+    m_sizeList == 0 ? m_first = m_last = p : m_first = p;
 
-    sizeList++;
+    m_sizeList++;
 }
 
-void List::pushBack(const int value){
+void List::pushBack(const int value)
+{
+    try {
+        new Elem;
+    }  catch (std::exception) {
+        throw "Error";
+    }
+
     Elem *p = new Elem;
 
-    p->prev = last;
+    p->prev = m_last;
     p->element = value;
     p->next = nullptr;
 
-    if(last != nullptr){
-        last->next = p;
+    if(m_last != nullptr)
+    {
+        m_last->next = p;
     }
 
-    sizeList == 0 ? first = last = p : last = p;
+    m_sizeList == 0 ? m_first = m_last = p : m_last = p;
 
-    sizeList++;
+    m_sizeList++;
 }
 
-int List::at(const int index){
+int List::at(const int index)
+{
     Elem *p;
 
-    if(index <= sizeList && index >= 0){
-        p = first;
-        for(int i = 0; i < index; i++){
-            p = p->next;
-        }
+    if(index >= m_sizeList || index < 0){
+        throw "dont have this index";
     }
-    else{
-        std::cout << "dont have this index" << std::endl;
-        return 0; //to do add exeption
+
+    p = m_first;
+    for(int i = 0; i < index; i++)
+    {
+        p = p->next;
     }
-    std::cout << p->element;
     return p->element;
 }
 
-void List::clear(){
-//    Elem *p;
-    std::cout << "?";
-    auto p = first;
-    while(first){
-        p = p->next;
-//        p = first->next;
-//        std::cout << "*";
-//        delete first;
-//        first = p;
-//        std::cout << "!";
+void List::clear()
+{
+    Elem *p;
+    while(m_first)
+    {
+        p = m_first->next;
+        delete m_first;
+        m_first = p;
     }
-    sizeList = 0;
-    first = last = nullptr;
+    m_sizeList = 0;
+    m_first = m_last = nullptr;
 }
 
-List& List::operator=(const List &l){
-//    clear();
+List& List::operator=(const List &l)
+{
+    clear();
 
-//    Elem *p = l.first;
-//    std::cout << l.size();
-//    while(p != nullptr){
-//        pushBack(p->element);
-//        p = p->next;
-//    }
-//    return *this;
+    Elem *p = l.m_first;
+    while(p != nullptr)
+    {
+        pushBack(p->element);
+        p = p->next;
+    }
+    return *this;
 }
 
-bool List::operator==(const List &l){
-    if(sizeList != l.sizeList){
+bool List::operator==(const List &l)
+{
+    if(m_sizeList != l.m_sizeList)
+    {
         return false;
     }
 
     Elem *listOne, *ListTwo;
 
-    listOne = first;
-    ListTwo = l.first;
+    listOne = m_first;
+    ListTwo = l.m_first;
 
-    while (listOne != nullptr){
-        if(listOne->element != ListTwo->element){
+    while (listOne != nullptr)
+    {
+        if(listOne->element != ListTwo->element)
+        {
             return false;
         }
         listOne = listOne->next;
@@ -119,18 +137,22 @@ bool List::operator==(const List &l){
     return true;
 }
 
-bool List::operator!=(const List &l){
-    if(sizeList != l.sizeList){
+bool List::operator!=(const List &l)
+{
+    if(m_sizeList != l.m_sizeList)
+    {
         return true;
     }
 
     Elem *listOne, *ListTwo;
 
-    listOne = first;
-    ListTwo = l.first;
+    listOne = m_first;
+    ListTwo = l.m_first;
 
-    while (listOne != nullptr){
-        if(listOne->element == ListTwo->element){
+    while (listOne != nullptr)
+    {
+        if(listOne->element == ListTwo->element)
+        {
             return false;
         }
         listOne = listOne->next;
@@ -139,11 +161,13 @@ bool List::operator!=(const List &l){
     return true;
 }
 
-std::ostream& operator<< (std::ostream &out, const List &l){
+std::ostream& operator<< (std::ostream &out, const List &l)
+{
     Elem *p;
 
-    p = l.first;
-    while(p){
+    p = l.m_first;
+    while(p)
+    {
         out << p->element << " ";
         p = p->next;
     }
@@ -152,10 +176,35 @@ std::ostream& operator<< (std::ostream &out, const List &l){
 
 int List::size()
 {
-    return sizeList;
+    return m_sizeList;
 }
+
+int List::at(const int index) const
+{
+    Elem *p;
+
+    if(index >= m_sizeList){
+        throw "Error";
+    }
+
+    if(index <= m_sizeList && index >= 0)
+    {
+        p = m_first;
+        for(int i = 0; i < index; i++)
+        {
+            p = p->next;
+        }
+    }
+    else
+    {
+        std::cout << "dont have this index" << std::endl;
+        return 0; //to do add exeption
+    }
+    return p->element;
+}
+
 
 int List::size() const
 {
-    return sizeList;
+    return m_sizeList;
 }

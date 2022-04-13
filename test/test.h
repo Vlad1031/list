@@ -7,6 +7,6 @@ class Test
 public:
     Test();
 
-private:
-    List l;
+//private:
+//    List l;
 };

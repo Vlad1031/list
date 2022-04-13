@@ -171,56 +171,32 @@ _lib/fast:
 	cd /home/vskotselias/Project/build && $(MAKE) -f src/CMakeFiles/_lib.dir/build.make src/CMakeFiles/_lib.dir/build
 .PHONY : _lib/fast
 
-# Convenience name for target.
-src/CMakeFiles/_run.dir/rule:
-	cd /home/vskotselias/Project/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/_run.dir/rule
-.PHONY : src/CMakeFiles/_run.dir/rule
+list.o: list.cpp.o
 
-# Convenience name for target.
-_run: src/CMakeFiles/_run.dir/rule
-
-.PHONY : _run
-
-# fast build rule for target.
-_run/fast:
-	cd /home/vskotselias/Project/build && $(MAKE) -f src/CMakeFiles/_run.dir/build.make src/CMakeFiles/_run.dir/build
-.PHONY : _run/fast
-
-# target to build an object file
-list.o:
-	cd /home/vskotselias/Project/build && $(MAKE) -f src/CMakeFiles/_lib.dir/build.make src/CMakeFiles/_lib.dir/list.o
-	cd /home/vskotselias/Project/build && $(MAKE) -f src/CMakeFiles/_run.dir/build.make src/CMakeFiles/_run.dir/list.o
 .PHONY : list.o
 
-# target to preprocess a source file
-list.i:
-	cd /home/vskotselias/Project/build && $(MAKE) -f src/CMakeFiles/_lib.dir/build.make src/CMakeFiles/_lib.dir/list.i
-	cd /home/vskotselias/Project/build && $(MAKE) -f src/CMakeFiles/_run.dir/build.make src/CMakeFiles/_run.dir/list.i
+# target to build an object file
+list.cpp.o:
+	cd /home/vskotselias/Project/build && $(MAKE) -f src/CMakeFiles/_lib.dir/build.make src/CMakeFiles/_lib.dir/list.cpp.o
+.PHONY : list.cpp.o
+
+list.i: list.cpp.i
+
 .PHONY : list.i
 
-# target to generate assembly for a file
-list.s:
-	cd /home/vskotselias/Project/build && $(MAKE) -f src/CMakeFiles/_lib.dir/build.make src/CMakeFiles/_lib.dir/list.s
-	cd /home/vskotselias/Project/build && $(MAKE) -f src/CMakeFiles/_run.dir/build.make src/CMakeFiles/_run.dir/list.s
+# target to preprocess a source file
+list.cpp.i:
+	cd /home/vskotselias/Project/build && $(MAKE) -f src/CMakeFiles/_lib.dir/build.make src/CMakeFiles/_lib.dir/list.cpp.i
+.PHONY : list.cpp.i
+
+list.s: list.cpp.s
+
 .PHONY : list.s
 
-# target to build an object file
-main.o:
-	cd /home/vskotselias/Project/build && $(MAKE) -f src/CMakeFiles/_lib.dir/build.make src/CMakeFiles/_lib.dir/main.o
-	cd /home/vskotselias/Project/build && $(MAKE) -f src/CMakeFiles/_run.dir/build.make src/CMakeFiles/_run.dir/main.o
-.PHONY : main.o
-
-# target to preprocess a source file
-main.i:
-	cd /home/vskotselias/Project/build && $(MAKE) -f src/CMakeFiles/_lib.dir/build.make src/CMakeFiles/_lib.dir/main.i
-	cd /home/vskotselias/Project/build && $(MAKE) -f src/CMakeFiles/_run.dir/build.make src/CMakeFiles/_run.dir/main.i
-.PHONY : main.i
-
 # target to generate assembly for a file
-main.s:
-	cd /home/vskotselias/Project/build && $(MAKE) -f src/CMakeFiles/_lib.dir/build.make src/CMakeFiles/_lib.dir/main.s
-	cd /home/vskotselias/Project/build && $(MAKE) -f src/CMakeFiles/_run.dir/build.make src/CMakeFiles/_run.dir/main.s
-.PHONY : main.s
+list.cpp.s:
+	cd /home/vskotselias/Project/build && $(MAKE) -f src/CMakeFiles/_lib.dir/build.make src/CMakeFiles/_lib.dir/list.cpp.s
+.PHONY : list.cpp.s
 
 # Help Target
 help:
@@ -235,13 +211,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... _lib"
-	@echo "... _run"
 	@echo "... list.o"
 	@echo "... list.i"
 	@echo "... list.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 

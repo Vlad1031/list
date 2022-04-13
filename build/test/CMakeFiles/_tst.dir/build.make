@@ -57,42 +57,42 @@ include test/CMakeFiles/_tst.dir/progress.make
 # Include the compile flags for this target's objects.
 include test/CMakeFiles/_tst.dir/flags.make
 
-test/CMakeFiles/_tst.dir/main.o: test/CMakeFiles/_tst.dir/flags.make
-test/CMakeFiles/_tst.dir/main.o: ../test/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vskotselias/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/_tst.dir/main.o"
-	cd /home/vskotselias/Project/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/_tst.dir/main.o -c /home/vskotselias/Project/test/main.cpp
+test/CMakeFiles/_tst.dir/main.cpp.o: test/CMakeFiles/_tst.dir/flags.make
+test/CMakeFiles/_tst.dir/main.cpp.o: ../test/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vskotselias/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/_tst.dir/main.cpp.o"
+	cd /home/vskotselias/Project/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/_tst.dir/main.cpp.o -c /home/vskotselias/Project/test/main.cpp
 
-test/CMakeFiles/_tst.dir/main.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/_tst.dir/main.i"
-	cd /home/vskotselias/Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vskotselias/Project/test/main.cpp > CMakeFiles/_tst.dir/main.i
+test/CMakeFiles/_tst.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/_tst.dir/main.cpp.i"
+	cd /home/vskotselias/Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vskotselias/Project/test/main.cpp > CMakeFiles/_tst.dir/main.cpp.i
 
-test/CMakeFiles/_tst.dir/main.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/_tst.dir/main.s"
-	cd /home/vskotselias/Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vskotselias/Project/test/main.cpp -o CMakeFiles/_tst.dir/main.s
+test/CMakeFiles/_tst.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/_tst.dir/main.cpp.s"
+	cd /home/vskotselias/Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vskotselias/Project/test/main.cpp -o CMakeFiles/_tst.dir/main.cpp.s
 
-test/CMakeFiles/_tst.dir/test.o: test/CMakeFiles/_tst.dir/flags.make
-test/CMakeFiles/_tst.dir/test.o: ../test/test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vskotselias/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/CMakeFiles/_tst.dir/test.o"
-	cd /home/vskotselias/Project/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/_tst.dir/test.o -c /home/vskotselias/Project/test/test.cpp
+test/CMakeFiles/_tst.dir/test.cpp.o: test/CMakeFiles/_tst.dir/flags.make
+test/CMakeFiles/_tst.dir/test.cpp.o: ../test/test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vskotselias/Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/CMakeFiles/_tst.dir/test.cpp.o"
+	cd /home/vskotselias/Project/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/_tst.dir/test.cpp.o -c /home/vskotselias/Project/test/test.cpp
 
-test/CMakeFiles/_tst.dir/test.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/_tst.dir/test.i"
-	cd /home/vskotselias/Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vskotselias/Project/test/test.cpp > CMakeFiles/_tst.dir/test.i
+test/CMakeFiles/_tst.dir/test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/_tst.dir/test.cpp.i"
+	cd /home/vskotselias/Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vskotselias/Project/test/test.cpp > CMakeFiles/_tst.dir/test.cpp.i
 
-test/CMakeFiles/_tst.dir/test.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/_tst.dir/test.s"
-	cd /home/vskotselias/Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vskotselias/Project/test/test.cpp -o CMakeFiles/_tst.dir/test.s
+test/CMakeFiles/_tst.dir/test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/_tst.dir/test.cpp.s"
+	cd /home/vskotselias/Project/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vskotselias/Project/test/test.cpp -o CMakeFiles/_tst.dir/test.cpp.s
 
 # Object files for target _tst
 _tst_OBJECTS = \
-"CMakeFiles/_tst.dir/main.o" \
-"CMakeFiles/_tst.dir/test.o"
+"CMakeFiles/_tst.dir/main.cpp.o" \
+"CMakeFiles/_tst.dir/test.cpp.o"
 
 # External object files for target _tst
 _tst_EXTERNAL_OBJECTS =
 
-test/_tst: test/CMakeFiles/_tst.dir/main.o
-test/_tst: test/CMakeFiles/_tst.dir/test.o
+test/_tst: test/CMakeFiles/_tst.dir/main.cpp.o
+test/_tst: test/CMakeFiles/_tst.dir/test.cpp.o
 test/_tst: test/CMakeFiles/_tst.dir/build.make
 test/_tst: src/lib_lib.a
 test/_tst: lib/libgtest.a

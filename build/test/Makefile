@@ -171,35 +171,59 @@ _tst/fast:
 	cd /home/vskotselias/Project/build && $(MAKE) -f test/CMakeFiles/_tst.dir/build.make test/CMakeFiles/_tst.dir/build
 .PHONY : _tst/fast
 
-# target to build an object file
-main.o:
-	cd /home/vskotselias/Project/build && $(MAKE) -f test/CMakeFiles/_tst.dir/build.make test/CMakeFiles/_tst.dir/main.o
+main.o: main.cpp.o
+
 .PHONY : main.o
 
-# target to preprocess a source file
-main.i:
-	cd /home/vskotselias/Project/build && $(MAKE) -f test/CMakeFiles/_tst.dir/build.make test/CMakeFiles/_tst.dir/main.i
+# target to build an object file
+main.cpp.o:
+	cd /home/vskotselias/Project/build && $(MAKE) -f test/CMakeFiles/_tst.dir/build.make test/CMakeFiles/_tst.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
 .PHONY : main.i
 
-# target to generate assembly for a file
-main.s:
-	cd /home/vskotselias/Project/build && $(MAKE) -f test/CMakeFiles/_tst.dir/build.make test/CMakeFiles/_tst.dir/main.s
+# target to preprocess a source file
+main.cpp.i:
+	cd /home/vskotselias/Project/build && $(MAKE) -f test/CMakeFiles/_tst.dir/build.make test/CMakeFiles/_tst.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
 .PHONY : main.s
 
-# target to build an object file
-test.o:
-	cd /home/vskotselias/Project/build && $(MAKE) -f test/CMakeFiles/_tst.dir/build.make test/CMakeFiles/_tst.dir/test.o
+# target to generate assembly for a file
+main.cpp.s:
+	cd /home/vskotselias/Project/build && $(MAKE) -f test/CMakeFiles/_tst.dir/build.make test/CMakeFiles/_tst.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+test.o: test.cpp.o
+
 .PHONY : test.o
 
-# target to preprocess a source file
-test.i:
-	cd /home/vskotselias/Project/build && $(MAKE) -f test/CMakeFiles/_tst.dir/build.make test/CMakeFiles/_tst.dir/test.i
+# target to build an object file
+test.cpp.o:
+	cd /home/vskotselias/Project/build && $(MAKE) -f test/CMakeFiles/_tst.dir/build.make test/CMakeFiles/_tst.dir/test.cpp.o
+.PHONY : test.cpp.o
+
+test.i: test.cpp.i
+
 .PHONY : test.i
 
-# target to generate assembly for a file
-test.s:
-	cd /home/vskotselias/Project/build && $(MAKE) -f test/CMakeFiles/_tst.dir/build.make test/CMakeFiles/_tst.dir/test.s
+# target to preprocess a source file
+test.cpp.i:
+	cd /home/vskotselias/Project/build && $(MAKE) -f test/CMakeFiles/_tst.dir/build.make test/CMakeFiles/_tst.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
+
 .PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	cd /home/vskotselias/Project/build && $(MAKE) -f test/CMakeFiles/_tst.dir/build.make test/CMakeFiles/_tst.dir/test.cpp.s
+.PHONY : test.cpp.s
 
 # Help Target
 help:

@@ -1,5 +1,3 @@
-#add_executable(test main.cpp test.cpp test.h)
-
 set(BINARY ${Project}_tst)
 
 file(GLOB_RECURSE TEST_SOURCES LIST_DIRECTORIES true *.h *.cpp)

@@ -11,7 +11,6 @@
 /home/vskotselias/Project/build/src/CMakeFiles/rebuild_cache.dir
 /home/vskotselias/Project/build/src/CMakeFiles/edit_cache.dir
 /home/vskotselias/Project/build/src/CMakeFiles/_lib.dir
-/home/vskotselias/Project/build/src/CMakeFiles/_run.dir
 /home/vskotselias/Project/build/test/CMakeFiles/install/strip.dir
 /home/vskotselias/Project/build/test/CMakeFiles/install/local.dir
 /home/vskotselias/Project/build/test/CMakeFiles/install.dir

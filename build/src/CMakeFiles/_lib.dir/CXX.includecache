@@ -7,8 +7,6 @@
 #IncludeRegexTransform: 
 
 /home/vskotselias/Project/src/list.cpp
-iostream
--
 list.h
 /home/vskotselias/Project/src/list.h
 
